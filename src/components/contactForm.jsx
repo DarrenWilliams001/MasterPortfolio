@@ -12,19 +12,29 @@ const ContactForm = () => {
             <label className="my-2" name="fullname">
               Full Name
             </label>
-            <input className="h-" type="text" name="fullname" />
+            <input
+              className="h-[2rem] rounded-md"
+              type="text"
+              name="fullname"
+            />
             <label className="my-2" name="email">
               Email
             </label>
-            <input type="text" name="email" />
+            <input className="h-[2rem] rounded-md" type="text" name="email" />
             <label className="my-2" name="phone">
               Phone Number
             </label>
-            <input type="text" name="phone" />
+            <input className="h-[2rem] rounded-md" type="text" name="phone" />
             <label className="my-2" name="message">
               Message
             </label>
-            <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <textarea
+              className="rounded-md"
+              name="message"
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
           </div>
         </div>
         <div className="col-auto">

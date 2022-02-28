@@ -1,3 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Teko:wght@700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-color: #001018;
+}
+.teko-font {
+  font-family: "Teko", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.primary-navy-font {
+  color: #001018;
+}
 @tailwind base;
 
 h1 {

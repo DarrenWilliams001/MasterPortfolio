@@ -8,8 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from "gatsby-background-image"
 
 import Header from "./header"
+import Social from "./socials"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,25 +24,40 @@ const Layout = ({ children }) => {
           title
         }
       }
+      placeholderImage: file(relativePath: { eq: "background.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(formats: WEBP, quality: 90, width: 2160)
+        }
+      }
     }
   `)
+
+  const image = getImage(data.placeholderImage)
+  const bgImage = convertToBgImage(image)
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <div className="container mx-auto flex relative flex-wrap items-center justify-between p-6 mb-6 min-h-screen">
+        <main className="w-full">{children}</main>
+        <Social />
+        <footer className="text-white w-full text-right">
+          © {new Date().getFullYear()} Darren Williams
         </footer>
+        <BackgroundImage
+          Tag="section"
+          {...bgImage}
+          preserveStackingContext
+          style={{
+            minWidth: "100vw",
+            minHeight: "100vh",
+            opacity: `.2`,
+            position: `fixed`,
+            top: 0,
+            left: 0,
+            zIndex: "-1000",
+          }}
+        />
       </div>
     </>
   )
