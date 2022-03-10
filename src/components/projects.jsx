@@ -36,7 +36,6 @@ const Projects = () => {
         </h3>
         <div className="d-flex">
           {projects.projectsJson.projects.map((p, i) => {
-            console.log(i)
             return (
               <Project
                 key={i}

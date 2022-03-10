@@ -42,13 +42,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="md:container mx-auto flex relative flex-wrap items-center justify-between p-8 mb-6 z-500 min-h-screen overflow-hidden">
         <main className="w-full">{children}</main>
-
-        <BackgroundImage
-          Tag="section"
-          {...bgImage}
-          preserveStackingContext
-          className="min-w-[100vw] min-h-[100vh] opacity-[.2] fixed top-0 left-0 -z-[1000]"
-        />
       </div>
       <Social />
       <footer className="text-white border-t-2 py-6 text-center border-t-teal-300 w-full">
