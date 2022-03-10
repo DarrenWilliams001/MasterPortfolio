@@ -35,7 +35,11 @@ function Header({ siteTitle }) {
             </Link>
           </ul>
           <div className="md:hidden flex items-center">
-            <button onClick={openMobileMenu} className="outline-none">
+            <button
+              aria-label="Navigation Menu"
+              onClick={openMobileMenu}
+              className="outline-none"
+            >
               <svg
                 class="w-6 h-6 text-white hover:text-teal-300 "
                 x-show="!showMenu"

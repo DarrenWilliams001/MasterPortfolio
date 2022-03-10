@@ -20,13 +20,19 @@ const Project = props => {
           }
         >
           <a className="my-4 lg:my-0" href={props.link}>
-            <h5 className="teko-font text-teal-300 text-3xl lg:text-2xl">
+            <h3 className="teko-font text-teal-300 text-3xl lg:text-2xl">
               {props.title}
-            </h5>
+            </h3>
           </a>
           <p className="text-white">{props.desc}</p>
         </div>
-        <img className="my-4 w-full lg:w-8/12 lg:my-0" src={props.mainImage} />
+        <img
+          alt={props.title}
+          width={100}
+          height={100}
+          className="my-4 w-full lg:w-8/12 lg:my-0"
+          src={props.mainImage}
+        />
       </div>
     </div>
   )

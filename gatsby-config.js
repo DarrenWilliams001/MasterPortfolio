@@ -3,9 +3,7 @@ module.exports = {
     title: `Darren Williams`,
     description: `Australian frontend developer`,
   },
-  flags: {
-    THE_FLAG: false,
-  },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
