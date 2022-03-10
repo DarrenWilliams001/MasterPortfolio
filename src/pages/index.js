@@ -4,11 +4,11 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Hero from "../components/hero"
 import About from "../components/about"
 import Dots from "../components/dots"
 import ContactForm from "../components/contactForm"
+import Projects from "../components/projects"
 
 const IndexPage = () => {
   return (
@@ -16,6 +16,8 @@ const IndexPage = () => {
       <Hero />
       <Dots />
       <About />
+      <Dots />
+      <Projects />
       <Dots />
       <ContactForm />
     </Layout>

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Teko:wght@700&display=swap");
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
 
 * {
   font-family: "Poppins", sans-serif;
@@ -14,10 +17,13 @@ body {
   font-weight: 900;
   text-transform: uppercase;
 }
-.primary-navy-font {
-  color: #001018;
+
+:target {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
 }
-@tailwind base;
 
 h1 {
   @apply text-2xl;
@@ -29,8 +35,5 @@ h3 {
   @apply text-lg;
 }
 a {
-  @apply text-blue-600;
+  @apply text-teal-300;
 }
-
-@tailwind components;
-@tailwind utilities;
