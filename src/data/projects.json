@@ -21,6 +21,13 @@
         "mainImage": "../images/RepairFlow.jpg",
         "software1": ["../images/logo-react.svg"],
         "description": "Built using React and MongoDB, Repair flow is a web application that streamlines the work order process through repair orders, time-tracking, task management and reporting features. "
+      },
+      {
+        "title": "The Tipsy Tiper",
+        "link": "https://thetipsytipper.netlify.app/",
+        "mainImage": "../images/tipsyTipper.png",
+        "software1": ["../images/logo-react.svg"],
+        "description": "Built with Nextjs, this is a fun application bringing in data from squiggle.com.au API, giving you the ablility to select two teams and predict a winner. Also showing the current round results from the API. "
       }
     ]
   }
